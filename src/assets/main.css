@@ -1,0 +1,21 @@
+@import './base.css';
+
+#app {
+  font-weight: normal;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background: #E7D2B7;
+  color: #3E2723;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+}
