@@ -54,6 +54,9 @@ let timer;
 
 onMounted(() => {
 
+  if(window.innerWidth <= 600) return;
+
+
   timer = setInterval(() => {
 
     if (!carousel.value) return;
@@ -63,15 +66,21 @@ onMounted(() => {
       carousel.value.scrollLeft + carousel.value.clientWidth >=
       carousel.value.scrollWidth - 10;
 
+
     if (final) {
+
       carousel.value.scrollTo({
-        left: 0,
-        behavior: "smooth",
+        left:0,
+        behavior:"smooth"
       });
+
     } else {
+
       proximo();
+
     }
-  }, 3500);
+
+  },3500);
 
 });
 
@@ -169,6 +178,8 @@ onUnmounted(() => {
   scroll-snap-type: x mandatory;
 
   scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .viewport::-webkit-scrollbar {
@@ -282,6 +293,16 @@ onUnmounted(() => {
   color:#795548;
 
   font-size:1rem;
+.viewport {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+}
 
 }
 
@@ -379,48 +400,41 @@ onUnmounted(() => {
 
 @media(max-width:600px){
 
-
   .carousel {
-
     gap:5px;
+  }
 
+    .viewport {
+    cursor: grab;
+  }
+
+  .viewport:active {
+    cursor: grabbing;
+  }
+
+  .top {
+    flex-direction:column;
+  }
+
+  .nota {
+    flex-direction:row;
+    align-items:center;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .track {
+    gap:15px;
+    padding: 0 10px;
   }
 
 
   .card {
-
-    flex:0 0 100%;
-
+    flex:0 0 85%;
     padding:20px;
-
   }
-
-
-  .top {
-
-    flex-direction:column;
-
-  }
-
-
-  .nota {
-
-    flex-direction:row;
-
-    align-items:center;
-
-  }
-
-
-  .arrow svg {
-
-    width:30px;
-
-    height:30px;
-
-  }
-
-
 }
 
 

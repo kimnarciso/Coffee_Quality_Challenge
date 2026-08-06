@@ -399,6 +399,7 @@ select:focus {
   .desc {
     padding: 12px 14px;
     font-size: .95rem;
+    width: 290px;
   }
 
   .desc {

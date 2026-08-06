@@ -48,6 +48,7 @@ class="primeiro"
 <LeaderboardTable
  :cafes="rankingSemPrimeiro"
 />
+
 </main>
 </template>
 
