@@ -9,11 +9,10 @@ defineProps({
 })
 
 function posicao(index) {
-  if (index === 0) return '🥇'
-  if (index === 1) return '🥈'
-  if (index === 2) return '🥉'
+  if (index === 0) return '🥈'
+  if (index === 1) return '🥉'
 
-  return `${index + 1}º`
+  return `${index + 2}º`
 }
 </script>
 
@@ -66,27 +65,19 @@ function posicao(index) {
 <style scoped>
 .lista {
   display: flex;
-
   flex-direction: column;
-
   gap: 20px;
 }
 
 .ranking-card {
   background: #fff9f2;
-
   border: 1px solid #e7d2b7;
-
   border-radius: 20px;
-
   padding: 20px;
-
   display: flex;
-
   align-items: center;
-
+  justify-content: space-between;
   gap: 25px;
-
   transition: 0.3s;
 }
 
@@ -96,9 +87,7 @@ function posicao(index) {
 
 .posicao span {
   font-size: 2rem;
-
   font-weight: bold;
-
   color: #8b5e3c;
 }
 
@@ -108,36 +97,28 @@ function posicao(index) {
 
 .info h2 {
   margin: 0;
-
   color: #3e2723;
 }
 
 .info p {
   color: #795548;
-
   margin: 5px 0;
 }
 
 .info span {
   background: #f5e6d3;
-
   padding: 5px 12px;
-
   border-radius: 20px;
-
   color: #6d4c41;
 }
 
 .nota {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
-
   color: #ffb700;
-
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 @media (max-width: 700px) {
@@ -156,10 +137,114 @@ function posicao(index) {
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .detalhes:hover {
   background: #8b5e3c;
   transform: translateY(-2px);
+}
+
+/* ==========================
+   Tablet
+========================== */
+@media (max-width: 900px) {
+  .ranking-card {
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .info h2 {
+    font-size: 1.3rem;
+  }
+
+  .nota {
+    font-size: 1.3rem;
+  }
+}
+
+/* ==========================
+   Celular
+========================== */
+@media (max-width: 600px) {
+  .ranking-card {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .posicao {
+    display: flex;
+    justify-content: center;
+  }
+
+  .posicao span {
+    font-size: 2.2rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info h2 {
+    font-size: 1.25rem;
+  }
+
+  .info p {
+    margin: 8px 0;
+    font-size: .95rem;
+  }
+
+  .info span {
+    font-size: .9rem;
+  }
+
+  .nota {
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .detalhes {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* ==========================
+   Celulares pequenos
+========================== */
+@media (max-width: 380px) {
+  .ranking-card {
+    padding: 15px;
+  }
+
+  .posicao span {
+    font-size: 1.8rem;
+  }
+
+  .info h2 {
+    font-size: 1.1rem;
+  }
+
+  .info p {
+    font-size: .9rem;
+  }
+
+  .nota {
+    font-size: 1.1rem;
+  }
+
+  .detalhes {
+    padding: 10px 16px;
+    font-size: .9rem;
+  }
 }
 </style>

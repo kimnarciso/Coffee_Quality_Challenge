@@ -199,37 +199,26 @@ function salvar() {
 
 .grupo {
   background: #fff9f2;
-
   border-radius: 22px;
-
   padding: 30px;
-
   border: 1px solid #ead8c5;
 }
 
 .grupo h3 {
   letter-spacing: 3px;
-
   font-size: 2rem;
-
   color: #3e2723;
-
   margin-bottom: 25px;
 }
 
 label {
   display: block;
-
   color: #6d4c41;
-
   font-size: 0.95rem;
-
   font-weight: 600;
-
   margin-bottom: 8px;
 }
 .desc {
-
   height: 200px;
 }
 textarea::placeholder {
@@ -259,7 +248,6 @@ select:focus {
 
 .criterio {
   padding: 18px 0;
-
   border-bottom: 1px solid #eee0d2;
 }
 
@@ -269,53 +257,37 @@ select:focus {
 
 .titulo-criterio {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   margin-bottom: 12px;
 }
 
 .titulo-criterio span {
   color: #5d4037;
-
   font-size: 1.1rem;
-
   font-weight: 600;
 }
 
 .titulo-criterio strong {
   background: #f5e6d3;
-
   color: #8b5e3c;
-
   padding: 5px 12px;
-
   border-radius: 20px;
-
   font-size: 0.9rem;
 }
 
 .estrelas {
   display: flex;
-
   gap: 8px;
 }
 
 .estrelas button {
   border: none;
-
   background: none;
-
   cursor: pointer;
-
   font-size: 28px;
-
   color: #d8c8b8;
-
   transition: 0.2s;
-
   padding: 0;
 }
 
@@ -329,59 +301,42 @@ select:focus {
 
 .resultado {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   background: #3e2723;
-
   padding: 25px 30px;
-
   border-radius: 18px;
-
   color: #e7d2b7;
 }
 
 .resultado span {
   font-size: 1.2rem;
-
   letter-spacing: 1px;
 }
 
 .resultado strong {
   font-size: 2rem;
-
   font-family: 'Abril Fatface', serif;
-
   color: #f3e2a9;
 }
 
 .acoes {
   display: flex;
-
   justify-content: flex-end;
-
   gap: 15px;
 }
 
 .acoes button {
   padding: 13px 30px;
-
   border-radius: 12px;
-
   font-size: 1rem;
-
   cursor: pointer;
-
   transition: 0.3s;
 }
 
 .limpar {
   background: transparent;
-
   border: 2px solid #8b5e3c;
-
   color: #8b5e3c;
 }
 
@@ -391,9 +346,7 @@ select:focus {
 
 .salvar {
   background: #3e2723;
-
   border: 2px solid #3e2723;
-
   color: #e7d2b7;
 }
 
@@ -401,25 +354,133 @@ select:focus {
   background: #5d4037;
 }
 
-@media (max-width: 700px) {
+/* ==========================
+   Tablet
+========================== */
+@media (max-width: 900px) {
   .grupo {
+    padding: 24px;
+  }
+
+  .grupo h3 {
+    font-size: 1.8rem;
+  }
+
+  .resultado {
+    padding: 22px 24px;
+  }
+
+  .resultado strong {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================
+   Celular
+========================== */
+@media (max-width: 600px) {
+  .grupo {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .grupo h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: .9rem;
+  }
+
+  input,
+  select,
+  .desc {
+    padding: 12px 14px;
+    font-size: .95rem;
+  }
+
+  .desc {
+    height: 150px;
+  }
+
+  .titulo-criterio {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .titulo-criterio span {
+    font-size: 1rem;
+  }
+
+  .estrelas {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .estrelas button svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .resultado {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
     padding: 20px;
+  }
+
+  .resultado span {
+    font-size: 1rem;
+  }
+
+  .resultado strong {
+    font-size: 2rem;
+  }
+
+  .acoes {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .acoes button {
+    width: 100%;
+  }
+}
+
+/* ==========================
+   Celulares pequenos
+========================== */
+@media (max-width: 380px) {
+  .grupo {
+    padding: 15px;
+  }
+
+  .grupo h3 {
+    font-size: 1.35rem;
+  }
+
+  .titulo-criterio span {
+    font-size: .95rem;
+  }
+
+  .titulo-criterio strong {
+    font-size: .8rem;
   }
 
   .estrelas {
     gap: 4px;
   }
 
-  .estrelas button {
-    font-size: 22px;
+  .estrelas button svg {
+    width: 18px;
+    height: 18px;
   }
 
-  .acoes {
-    flex-direction: column;
-  }
-
-  .acoes button {
-    width: 100%;
+  .resultado strong {
+    font-size: 1.7rem;
   }
 }
 </style>

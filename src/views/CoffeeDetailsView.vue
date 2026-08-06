@@ -128,17 +128,11 @@ h1 {
 
 .categoria {
   display: inline-block;
-
   margin-top: 15px;
-
   background: #f5e6d3;
-
   color: #6d4c41;
-
   padding: 8px 18px;
-
   border-radius: 30px;
-
   font-weight: 600;
 }
 
@@ -236,13 +230,14 @@ h1 {
 /* Data */
 
 .data {
-  margin: 30px;
+  margin: 30px 0;
   color: #8d6e63;
 }
 
 /* Botão voltar */
 
 .voltar {
+  display: inline-block;
   background: #3e2723;
   color: #fff9f2;
   text-decoration: none;
@@ -259,15 +254,126 @@ h1 {
   transform: translateY(-3px);
 }
 
-@media (max-width: 800px) {
+/* Tablet */
+@media (max-width: 900px) {
+  .container {
+    width: 94%;
+    padding-top: 105px;
+  }
+
   h1 {
     font-size: 3rem;
   }
+
+  .nota {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .nota strong {
+    font-size: 3.2rem;
+  }
+
   .avaliacoes {
     grid-template-columns: 1fr;
   }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+    padding-top: 95px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    line-height: 1.1;
+  }
+
+  .produtor {
+    font-size: 1rem;
+  }
+
+  .categoria {
+    font-size: .9rem;
+    padding: 7px 15px;
+  }
+
   .nota {
     flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .nota strong {
+    font-size: 2.8rem;
+  }
+
+  .descricao,
+  .sensorial {
+    padding: 20px;
+  }
+
+  .descricao h2,
+  .sensorial h2 {
+    font-size: 2rem;
+  }
+
+  .descricao p {
+    font-size: 1rem;
+  }
+
+  .avaliacao-item {
+    padding: 16px;
+  }
+
+  .avaliacao-item span {
+    font-size: 1rem;
+  }
+
+  .avaliacao-item strong {
+    font-size: 1.3rem;
+  }
+
+  .data {
+    margin: 24px 0;
+    text-align: center;
+    font-size: .95rem;
+  }
+
+  .voltar {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 380px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .nota strong {
+    font-size: 2.3rem;
+  }
+
+  .descricao h2,
+  .sensorial h2 {
+    font-size: 1.7rem;
+  }
+
+  .descricao,
+  .sensorial {
+    padding: 16px;
+  }
+
+  .avaliacao-item {
+    padding: 14px;
   }
 }
 </style>

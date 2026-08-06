@@ -55,11 +55,33 @@ const maiorNota = computed(() => {
 </template>
 
 <style scoped>
-
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  display: flex;
+  gap: 30px;
   margin: 40px auto;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+  }
+}
+
+/* Celular */
+@media (max-width: 380px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
 }
 </style>

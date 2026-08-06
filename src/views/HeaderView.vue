@@ -50,33 +50,42 @@ const route = useRoute();
   <p>Ranking</p>
 </RouterLink>
   </div>
-  <div >
+  <div class="profile">
       <UserCircleIcon :size="40" />
   </div>
 </header>
 </template>
 
 <style scoped>
-
-
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 15px 6px;
+
+  padding: 10px 10px 6px;
+
+  width: 100%;
+  z-index: 999;
+
+  background: #E7D2B7;
   box-shadow: 0px -4px 8px 3px #3E2723;
   border-radius: 0 0 10px 10px;
-  width: 100%;
-  position: fixed;
-  z-index: 9;
-  background-color: #E7D2B7;
 }
 
 .navegacao {
-    display: flex;
-    gap: 10vw;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
 
-} 
+.profile {
+  padding-right: 20px;
+}
 
 .icon-style p {
     font-family: "Poppins", sans-serif;
@@ -140,5 +149,96 @@ width: 70px;
 
 .icon-style.ativo::after {
   transform: scaleX(1);
+}
+
+/* ==========================
+   Tablet
+========================== */
+@media (max-width: 900px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .navegacao {
+    gap: 6vw;
+  }
+
+  .icon-style p {
+    font-size: .9rem;
+  }
+}
+
+/* ==========================
+   Celular
+========================== */
+@media (max-width: 650px) {
+  header {
+    padding: 10px 15px;
+  }
+  .logo img {
+    width: 55px;
+  }
+.navegacao {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 5vw, 80px);
+}
+
+  .icon-style {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .icon-style p {
+    display: none;
+  }
+
+  .icon-style::after {
+    bottom: -8px;
+  }
+
+  .icon-style svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+  }
+}
+
+/* ==========================
+   Celulares pequenos
+========================== */
+@media (max-width: 420px) {
+  header {
+    padding: 8px 10px;
+  }
+
+  .logo img {
+    width: 48px;
+  }
+
+  .navegacao {
+    gap: 12px;
+  }
+
+  .icon-style svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-style::after {
+    height: 1.5px;
+  }
+
+  header > div:last-child svg {
+    width: 34px;
+    height: 34px;
+  }
 }
 </style>

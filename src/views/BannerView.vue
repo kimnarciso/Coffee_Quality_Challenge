@@ -50,7 +50,8 @@ import DashBoard from '@/components/DashBoard.vue';
 <style scoped>
 .banner { 
   max-width: 1400px;
-  margin: 20vh 3vw 40px;
+  margin: 140px auto 40px;
+  width: min(1400px, calc(100% - 40px));
   padding: 60px 0 60px 60px;
   display: flex;
   align-items: center;
@@ -115,14 +116,144 @@ import DashBoard from '@/components/DashBoard.vue';
 
 
 .banner-image img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 550px;
   filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
 }
 
-.cards {
+
+
+/* ==========================
+   Tablet
+========================== */
+@media (max-width: 900px) {
+
+  .banner {
+    flex-direction: column;
+    text-align: left;
+    padding: 40px 0 40px 30px;
+    margin: 120px 0 30px 24px ;
+  }
+
+  .banner-content {
     display: flex;
-    gap: 9vw;
-    margin: 40px;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .banner h1 {
+    font-size: 48px;
+  }
+
+  .banner p {
+    font-size: 17px;
+    max-width: 600px;
+    margin-right: 30px;
+  }
+  .banner-image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .banner-image img {
+    max-width: 320px;
+  }
+
+  .banner-decoration,
+  .banner-bottom-decoration {
+    justify-content: left;
+    margin-bottom: 15px;
+  }
+
+  .line {
+    width: 120px;
+  }
+
+  .banner-bottom-decoration .line {
+    width: 70px;
+  }
+}
+
+/* ==========================
+   Celular
+========================== */
+@media (max-width: 600px) {
+  .banner {
+    margin: 110px 0 24px 12px;
+    padding: 28px 0 28px 20px;
+    border-radius: 22px;
+  }
+
+  .banner h1 {
+    font-size: 2.3rem;
+    line-height: 1.15;
+  }
+
+  .banner p {
+    font-size: 1rem;
+    margin-right: 20px;
+  }
+
+  .banner-decoration span {
+    font-size: .9rem;
+    letter-spacing: 2px;
+  }
+
+  .banner-decoration img,
+  .banner-bottom-decoration img {
+    width: 26px;
+  }
+
+  .line {
+    width: 70px;
+  }
+
+  .banner-bottom-decoration .line {
+    width: 45px;
+  }
+
+  .banner-image img {
+    max-width: 260px;
+  }
+    .banner-image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}
+
+/* ==========================
+   Celulares pequenos
+========================== */
+@media (max-width: 380px) {
+  .banner {
+    padding: 22px 0 22px 16px;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: .95rem;
+    margin-right: 16px;
+  }
+
+  .line {
+    width: 45px;
+  }
+
+  .banner-bottom-decoration .line {
+    width: 30px;
+  }
+
+  .banner-image img {
+    max-width: 220px;
+  }
 }
 </style>

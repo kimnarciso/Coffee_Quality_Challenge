@@ -56,7 +56,7 @@ button {
     gap: 15px;
     font-size: 1.2rem;
     padding: 10px 25px;
-    margin: 2vh auto;
+    margin: 32px auto;
     border: none;
     color: #E7D2B7;
     border-radius: 10px;
@@ -87,5 +87,52 @@ button.ativo {
 
 }
 
+main {
+  padding: 0 20px;
+}
 
+/* Tablet */
+@media (max-width: 768px) {
+  button {
+    font-size: 1.05rem;
+    padding: 10px 20px;
+    gap: 12px;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+    max-width: 350px;
+    justify-content: center;
+
+    font-size: 1rem;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  button :deep(svg) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 400px) {
+  main {
+    padding: 0 12px;
+  }
+
+  button {
+    font-size: .95rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+  }
+
+  button :deep(svg) {
+    width: 22px;
+    height: 22px;
+  }
+}
 </style>

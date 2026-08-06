@@ -242,4 +242,141 @@ const historico = computed(() => {
     grid-template-columns: 1fr;
   }
 }
+/* ==========================
+   Tablet
+========================== */
+@media (max-width: 900px) {
+  .container {
+    width: 94%;
+    padding-top: 105px;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  .titulo h1 {
+    font-size: 3.2rem;
+  }
+
+  .titulo p {
+    font-size: 1.1rem;
+  }
+
+  .melhores h2,
+  .historico h2,
+  .formulario h2 {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  .conteudo {
+    margin: 40px 0;
+  }
+}
+
+/* ==========================
+   Celular
+========================== */
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+    padding-top: 95px;
+  }
+
+  .titulo h1 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
+
+  .titulo p {
+    font-size: 1rem;
+  }
+
+  .resumos {
+    gap: 16px;
+  }
+
+  .resumo {
+    padding: 18px;
+    gap: 15px;
+  }
+
+  .icone {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+
+  .icone :deep(svg) {
+    width: 24px;
+    height: 24px;
+  }
+
+  .resumo span {
+    font-size: .9rem;
+    letter-spacing: 1px;
+  }
+
+  .resumo strong {
+    font-size: 1.7rem;
+  }
+
+  .melhores h2,
+  .historico h2,
+  .formulario h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+
+  .conteudo {
+    margin: 30px 0;
+  }
+
+  .historico {
+    margin-top: 40px;
+  }
+
+  .historico-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* ==========================
+   Celulares pequenos
+========================== */
+@media (max-width: 380px) {
+  .titulo h1 {
+    font-size: 2rem;
+  }
+
+  .titulo p {
+    font-size: .95rem;
+  }
+
+  .resumo {
+    padding: 16px;
+  }
+
+  .icone {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icone :deep(svg) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .resumo strong {
+    font-size: 1.5rem;
+  }
+
+  .melhores h2,
+  .historico h2,
+  .formulario h2 {
+    font-size: 1.8rem;
+  }
+}
 </style>
